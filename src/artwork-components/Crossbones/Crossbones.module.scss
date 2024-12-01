@@ -1,0 +1,185 @@
+@import 'variables';
+
+.crossbones_background {
+    position: relative;
+
+    width: 500px;
+    height: 500px;
+    background-color: black;
+
+    .dead-head {
+        position: absolute;
+        top: 80px;
+        left: 150px;
+        width: 200px;
+        height: 160px;
+        border-radius: 45% 45% 10% 10%;
+        background-color: $white;
+
+        .eyes {
+            position: absolute;
+            top: 78px;
+            left: 15px;
+            width: 170px;
+            .eye {
+                position: absolute;
+                width: 70px;
+                height: 65px;
+                background-image: radial-gradient($black, $shadow-50);
+
+                &.left {
+                    left: 0;
+                    border-radius: 45% 50% 42% 30%;
+                }
+
+                &.right {
+                    right: 0;
+                    border-radius: 50% 45% 30% 42%;
+                }
+            }
+        }
+
+        .nose {
+            position: absolute;
+            top: 120px;
+            left: 75px;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid $black;
+            z-index: +10;
+        }
+
+        .jaws {
+            position: absolute;
+            top: 125px;
+            left: 40px;
+            width: 120px;
+            height: 150px;
+            border-radius: 0 0 20% 20%;
+            background-color: $white;
+            transform: perspective(50em) rotateX(-50deg);
+        }
+    }
+
+    .bone {
+        position: absolute;
+        top: 370px;
+        width: 220px;
+        height: 26px;
+        background-color: $shadow-10;
+        filter: drop-shadow(5px 5px 7px $shadow-90);
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            z-index: +1;
+            width: 220px;
+            height: 11px;
+            border-top: 5px solid $white;
+            border-bottom: 5px solid $shadow-20;
+        }
+
+        &.one {
+            rotate: 20deg;
+            left: 130px;
+
+            .bone-roll {
+                &.br {
+                    right: -15px;
+                    top: 10px;
+
+                    &::before {
+                        rotate: -40deg;
+                    }
+
+                    &::after {
+                        rotate: -45deg;
+                    }
+                }
+            }
+        }
+
+        &.two {
+            rotate: -20deg;
+            right: 130px;
+        }
+
+        .bone-roll {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $shadow-10;
+
+            z-index: +2;
+
+            &::before {
+                content: ' ';
+                position: absolute;
+                top: 1px;
+                left: 5px;
+                z-index: +1;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border-top: 5px solid $white;
+            }
+
+            &::after {
+                content: ' ';
+                position: absolute;
+                bottom: 1px;
+                right: 5px;
+                z-index: +1;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border-bottom: 5px solid $shadow-30;
+            }
+
+            &.tl {
+                left: -15px;
+                top: -10px;
+                background-color: $shadow-10;
+                &::before {
+                    rotate: -45deg;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &.bl {
+                left: -15px;
+                top: 10px;
+                background-color: $shadow-10;
+                &::before {
+                    rotate: -50deg;
+                }
+
+                &::after {
+                    rotate: -45deg;
+                }
+            }
+
+            &.tr {
+                right: -15px;
+                top: -10px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &.br {
+                right: -15px;
+                top: 10px;
+            }
+        }
+    }
+}
