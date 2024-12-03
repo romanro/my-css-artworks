@@ -1,11 +1,12 @@
 import { Crossbones } from '@/artwork-components/Crossbones/Crossbones';
+import { FC } from 'react';
 
 type ArtworkDetailPageProps = {
     params: { id: string };
 };
 
-export default function ArtworkDetailPage({ params }: ArtworkDetailPageProps) {
-    const { id } = params;
+const ArtworkDetailPage: FC<ArtworkDetailPageProps> = async ({ params }) => {
+    const { id } = await params;
 
     const getArtworkComponent = () => {
         if (id === 'crossbones') {
@@ -15,5 +16,9 @@ export default function ArtworkDetailPage({ params }: ArtworkDetailPageProps) {
         return null;
     };
 
-    return <div>{getArtworkComponent()}</div>;
-}
+    const artworkComponent = getArtworkComponent();
+
+    return <div>{artworkComponent}</div>;
+};
+
+export default ArtworkDetailPage;
