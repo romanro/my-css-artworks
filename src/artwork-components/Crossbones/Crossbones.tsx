@@ -17,8 +17,32 @@ export const Crossbones: FC = () => {
                 </div>
 
                 <div className={styles.nose}></div>
-
-                <div className={styles.jaws}></div>
+                <div className={styles.jaws}>
+                    <div className={styles.top} />
+                    <div className={styles.mouth}>
+                        <ul className={cnames([styles.tooth, styles.top])}>
+                            <li className={styles.wisdom} />
+                            <li className={styles.cuspid} />
+                            <li className={styles.lincisor} />
+                            <li className={styles.cincisor} />
+                            <li className={styles.cincisor} />
+                            <li className={styles.lincisor} />
+                            <li className={styles.cuspid} />
+                            <li className={styles.wisdom} />
+                        </ul>
+                        <ul className={cnames([styles.tooth, styles.bottom])}>
+                            <li className={styles.wisdom} />
+                            <li className={styles.cuspid} />
+                            <li className={styles.lincisor} />
+                            <li className={styles.cincisor} />
+                            <li className={styles.cincisor} />
+                            <li className={styles.lincisor} />
+                            <li className={styles.cuspid} />
+                            <li className={styles.wisdom} />
+                        </ul>
+                    </div>
+                    <div className={styles.bottom} />
+                </div>
             </div>
             <div className={cnames([styles.bone, styles.one])}>
                 <div className={cnames([styles.bone_roll, styles.tl])} />
