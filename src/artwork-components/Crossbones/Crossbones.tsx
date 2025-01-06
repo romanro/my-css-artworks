@@ -20,7 +20,7 @@ export const Crossbones: FC = () => {
                 <div className={styles.jaws}>
                     <div className={styles.top} />
                     <div className={styles.mouth}>
-                        <ul className={cnames([styles.tooth, styles.top])}>
+                        <ul className={cnames([styles.tooth, styles.ttop])}>
                             <li className={styles.wisdom} />
                             <li className={styles.cuspid} />
                             <li className={styles.lincisor} />
@@ -30,7 +30,7 @@ export const Crossbones: FC = () => {
                             <li className={styles.cuspid} />
                             <li className={styles.wisdom} />
                         </ul>
-                        <ul className={cnames([styles.tooth, styles.bottom])}>
+                        <ul className={cnames([styles.tooth, styles.tbottom])}>
                             <li className={styles.wisdom} />
                             <li className={styles.cuspid} />
                             <li className={styles.lincisor} />

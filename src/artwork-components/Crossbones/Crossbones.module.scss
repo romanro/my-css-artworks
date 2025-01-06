@@ -187,6 +187,31 @@
             .top {
                 position: absolute;
                 top: 0;
+                width: 100%;
+
+                &::before {
+                    content: ' ';
+                    position: absolute;
+                    z-index: +5;
+                    width: 8px;
+                    height: 80px;
+                    top: 10px;
+                    left: 5px;
+                    background-image: radial-gradient(ellipse at top left, $shadow-50, transparent);
+                    border-radius: 50%;
+                }
+
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    z-index: +5;
+                    width: 8px;
+                    height: 80px;
+                    top: 10px;
+                    right: 5px;
+                    background-image: radial-gradient(ellipse at top right, $shadow-90, transparent);
+                    border-radius: 50%;
+                }
             }
             .bottom {
                 position: absolute;
@@ -205,16 +230,16 @@
                     width: 10px;
                     height: 45px;
                     bottom: -20px;
-                    background-image: radial-gradient(ellipse at center, $black, transparent);
+                    background-image: radial-gradient(ellipse at left, $black, transparent);
                 }
             }
 
             .mouth {
                 position: absolute;
                 top: 35px;
-                left: 20px;
-                width: 70px;
-                height: 56px;
+                left: 15px;
+                width: 80px;
+                height: 53px;
                 background-color: $black;
                 border-radius: 5px 5px 30% 30%;
 
@@ -230,11 +255,11 @@
                     padding: 0;
                     z-index: +1;
                     & > li {
-                        background-color: $white;
+                        background-image: radial-gradient(ellipse at top left, $white, $shadow-20);
                         border: 1px solid $shadow-90;
                     }
 
-                    &.top {
+                    &.ttop {
                         top: -5px;
                         align-items: start;
 
@@ -243,7 +268,7 @@
                         }
 
                         .cincisor {
-                            width: 12px;
+                            width: 14px;
                             height: 25px;
                         }
                         .lincisor {
@@ -260,29 +285,32 @@
                         }
                     }
 
-                    &.bottom {
-                        bottom: -2px;
-                        align-items: start;
+                    &.tbottom {
+                        top: auto;
+                        bottom: -8px;
+                        align-items: end;
 
                         & > li {
                             border-radius: 2px 2px 50% 50%;
                         }
 
                         .cincisor {
-                            width: 10px;
-                            height: 25px;
+                            width: 11px;
+                            height: 28px;
                         }
                         .lincisor {
-                            width: 6px;
+                            width: 7px;
                             height: 28px;
                         }
                         .cuspid {
                             width: 7px;
-                            height: 20px;
+                            height: 22px;
+                            margin-bottom: 4px;
                         }
                         .wisdom {
                             width: 5px;
-                            height: 15px;
+                            height: 18px;
+                            margin-bottom: 7px;
                         }
                     }
                 }
