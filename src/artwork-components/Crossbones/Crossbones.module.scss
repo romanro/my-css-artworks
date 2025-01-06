@@ -260,6 +260,10 @@
                         border: 1px solid $shadow-90;
                     }
 
+                    .gold {
+                        background-image: radial-gradient(ellipse at top left, $white, $gold);
+                    }
+
                     &.ttop {
                         top: -5px;
                         align-items: start;

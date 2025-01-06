@@ -24,7 +24,7 @@ export const Crossbones: FC = () => {
                             <li className={styles.wisdom} />
                             <li className={styles.cuspid} />
                             <li className={styles.lincisor} />
-                            <li className={styles.cincisor} />
+                            <li className={cnames([styles.cincisor, styles.gold])} />
                             <li className={styles.cincisor} />
                             <li className={styles.lincisor} />
                             <li className={styles.cuspid} />
