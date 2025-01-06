@@ -254,6 +254,7 @@
                     margin: 0;
                     padding: 0;
                     z-index: +1;
+
                     & > li {
                         background-image: radial-gradient(ellipse at top left, $white, $shadow-20);
                         border: 1px solid $shadow-90;
@@ -262,7 +263,7 @@
                     &.ttop {
                         top: -5px;
                         align-items: start;
-
+                        background-image: radial-gradient(ellipse at bottom, $shadow-50, transparent);
                         & > li {
                             border-radius: 50% 50% 2px 2px;
                         }
@@ -289,6 +290,7 @@
                         top: auto;
                         bottom: -8px;
                         align-items: end;
+                        background-image: radial-gradient(ellipse at top, $shadow-50, transparent);
 
                         & > li {
                             border-radius: 2px 2px 50% 50%;
@@ -306,11 +308,13 @@
                             width: 7px;
                             height: 22px;
                             margin-bottom: 4px;
+                            background-image: radial-gradient(ellipse at top left, $white, $shadow-30);
                         }
                         .wisdom {
                             width: 5px;
                             height: 18px;
                             margin-bottom: 7px;
+                            background-image: radial-gradient(ellipse at top left, $white, $shadow-50);
                         }
                     }
                 }
