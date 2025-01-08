@@ -1,8 +1,10 @@
 import { Crossbones } from '@/artwork-components/Crossbones/Crossbones';
+import { Sunset } from '@/artwork-components/Sunset/Sunset';
+import { ArtworkId } from '@/models/artworks.models';
 import { FC } from 'react';
 
 type ArtworkDetailPageProps = {
-    params: { id: string };
+    params: { id: ArtworkId };
 };
 
 const ArtworkDetailPage: FC<ArtworkDetailPageProps> = async ({ params }) => {
@@ -11,6 +13,8 @@ const ArtworkDetailPage: FC<ArtworkDetailPageProps> = async ({ params }) => {
     const getArtworkComponent = () => {
         if (id === 'crossbones') {
             return <Crossbones />;
+        } else if (id === 'sunset') {
+            return <Sunset />;
         }
 
         return null;
