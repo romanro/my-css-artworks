@@ -1,14 +1,9 @@
 .ArtworksList {
     display: grid;
     gap: 0;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, max-content));
+    place-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
-
-    .ListItem {
-        position: relative;
-        aspect-ratio: 1 / 1;
-        overflow: hidden;
-    }
 }

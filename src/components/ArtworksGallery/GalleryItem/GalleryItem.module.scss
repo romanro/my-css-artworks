@@ -1,0 +1,16 @@
+.ListItem {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    &:hover {
+        .Description {
+            opacity: 1;
+        }
+    }
+
+    .Description {
+        opacity: 0;
+        position: absolute;
+    }
+}
