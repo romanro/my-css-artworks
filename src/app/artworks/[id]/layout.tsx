@@ -1,18 +1,17 @@
-'use client';
 import { ArtworksMenu } from '@/components/ArtworksMenu/ArtworksMenu';
-import { ArtworksContext } from '@/context/ArtworksContext';
-import { useContext } from 'react';
+import { SupportedArtworks } from '@/consts/artworks.consts';
+import { ArtworkId } from '@/models/artworks.models';
 
-export default function ArtworksLayout({
-    children,
-}: Readonly<{
+type ArtworksLayoutProps = Readonly<{
     children: React.ReactNode;
-}>) {
-    const { artworks } = useContext(ArtworksContext);
+    params: { id: ArtworkId };
+}>;
+export default async function ArtworksLayout({ children, params }: ArtworksLayoutProps) {
+    const { id } = await params;
 
     return (
         <div>
-            <ArtworksMenu artworks={artworks} />
+            <ArtworksMenu artworks={SupportedArtworks} selectedArtworkId={id} />
             {children}
         </div>
     );

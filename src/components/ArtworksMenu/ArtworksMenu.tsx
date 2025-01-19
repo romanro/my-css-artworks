@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
-import { Artwork } from '@/models/artworks.models';
-import Link from 'next/link';
+import { Artwork, ArtworkId } from '@/models/artworks.models';
+import { ArtworksMenuItem } from './ArtworksMenuItem';
 
 type ArtworksMenuProps = {
     artworks: Artwork[];
+    selectedArtworkId?: ArtworkId;
 };
-export const ArtworksMenu: FC<ArtworksMenuProps> = ({ artworks }) => {
+export const ArtworksMenu: FC<ArtworksMenuProps> = ({ artworks, selectedArtworkId }) => {
     if (!artworks?.length) {
         return null;
     }
@@ -14,9 +15,11 @@ export const ArtworksMenu: FC<ArtworksMenuProps> = ({ artworks }) => {
             <ul>
                 {artworks.map((artwork) => {
                     return (
-                        <li key={artwork.id}>
-                            <Link href={artwork.id}>{artwork.name}</Link>
-                        </li>
+                        <ArtworksMenuItem
+                            key={artwork.id}
+                            artwork={artwork}
+                            isSelected={artwork.id === selectedArtworkId}
+                        />
                     );
                 })}
             </ul>

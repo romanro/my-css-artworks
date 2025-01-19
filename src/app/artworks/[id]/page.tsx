@@ -1,6 +1,7 @@
-import { Crossbones } from '@/artwork-components/Crossbones/Crossbones';
-import { Sunset } from '@/artwork-components/Sunset/Sunset';
+import { ArtworkDescription } from '@/components/ArtworkDescription/ArtworkDescription';
+import { ArtworkViewer } from '@/components/ArtworkViewer/ArtworkViewer';
 import { ArtworkId } from '@/models/artworks.models';
+import { getArtworkById } from '@/utils/artwork.utils';
 import { FC } from 'react';
 
 type ArtworkDetailPageProps = {
@@ -10,19 +11,14 @@ type ArtworkDetailPageProps = {
 const ArtworkDetailPage: FC<ArtworkDetailPageProps> = async ({ params }) => {
     const { id } = await params;
 
-    const getArtworkComponent = () => {
-        if (id === 'crossbones') {
-            return <Crossbones />;
-        } else if (id === 'sunset') {
-            return <Sunset />;
-        }
+    const artwork = getArtworkById(id);
 
-        return null;
-    };
-
-    const artworkComponent = getArtworkComponent();
-
-    return <div>{artworkComponent}</div>;
+    return (
+        <section>
+            <ArtworkViewer artworkId={id} />
+            <ArtworkDescription artwork={artwork} />
+        </section>
+    );
 };
 
 export default ArtworkDetailPage;
