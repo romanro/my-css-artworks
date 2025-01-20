@@ -1,0 +1,25 @@
+{
+    "name": "Antifreez CSS Art",
+    "short_name": "CSS Art",
+    "description": "A creative web project by Roman Rozanov showcasing visually stunning artworks crafted purely with HTML and CSS.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "scope": "/",
+    "lang": "en",
+    "categories": ["art", "design", "technology"]
+}
