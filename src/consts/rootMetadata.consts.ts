@@ -48,3 +48,5 @@ Whether you're a designer looking for inspiration or a developer eager to explor
 
 export const ABOUT_ME_DESC =
     'About Roman Rozanov – the creator of Antifreez CSS Art, blending front-end development with creative CSS illustrations and animations.';
+
+export const ARTWORKS_DESK = `Explore the Antifreez CSS Art Gallery by Roman Rozanov – a collection of creative pure CSS illustrations and animations, showcasing the artistic side of web development.`;
