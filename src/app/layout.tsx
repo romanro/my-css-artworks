@@ -25,14 +25,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang='en'>
+        <html lang='en' className='h-screen'>
             <head>
                 <link rel='manifest' href='/manifest.json' />
-                <meta name='theme-color' content='#000000' />
+                <meta
+                    name='viewport'
+                    content='width=device-width, 
+                   initial-scale=1.0'></meta>
             </head>
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} h-screen`}>
                 <MainNavbar />
-                <main>{children}</main>
+                <main className='h-screen'>{children}</main>
             </body>
         </html>
     );

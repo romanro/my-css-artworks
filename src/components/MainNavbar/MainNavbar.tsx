@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { FC } from 'react';
-
+import styles from './MainNavbar.module.scss';
 export const MainNavbar: FC = () => {
     return (
-        <nav>
+        <nav className={styles.nav}>
             <ul>
                 <li>
                     <Link href='/'>Home</Link>
