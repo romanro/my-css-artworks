@@ -1,0 +1,17 @@
+@keyframes moveCloud {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+.animateCloud {
+    animation: moveCloud linear infinite;
+}
+
+.clouds {
+    z-index: +4;
+    height: 70%;
+}
