@@ -15,6 +15,12 @@ const geistMono = localFont({
     weight: '100 900',
 });
 
+const icons = localFont({
+    src: './fonts/MaterialIconsOutlined-Regular.otf',
+    variable: '--font-icons',
+    weight: '400',
+});
+
 export const metadata: Metadata = {
     ...ROOT_METADATA,
 };
@@ -33,7 +39,7 @@ export default function RootLayout({
                     content='width=device-width, 
                    initial-scale=1.0'></meta>
             </head>
-            <body className={`${geistSans.variable} ${geistMono.variable} h-screen`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} ${icons.variable} h-screen`}>
                 <MainNavbar />
                 <main className='h-screen'>{children}</main>
             </body>

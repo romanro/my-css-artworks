@@ -1,15 +1,20 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import styles from './MainNavbar.module.scss';
+import { Icon } from '../Icon/Icon';
 export const MainNavbar: FC = () => {
     return (
         <nav className={`${styles.nav} bg-white dark:bg-black`}>
             <ul>
                 <li>
-                    <Link href='/'>Home</Link>
+                    <Link href='/'>
+                        <Icon name='home' /> Home
+                    </Link>
                 </li>
                 <li>
-                    <Link href='/about'>About</Link>
+                    <Link href='/about'>
+                        <span className='font-icons'>contact_page</span> About
+                    </Link>
                 </li>
                 <li>
                     <Link href='/artworks'>ArtWorks</Link>
