@@ -1,8 +1,8 @@
+@use './../styles/theme' as *;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import '../styles/theme';
 
 html,
 body {

@@ -13,14 +13,18 @@ export const MainNavbar: FC = () => {
                 </li>
                 <li>
                     <Link href='/about'>
-                        <span className='font-icons'>contact_page</span> About
+                        <Icon name='person_pin' /> About
                     </Link>
                 </li>
                 <li>
-                    <Link href='/artworks'>ArtWorks</Link>
+                    <Link href='/artworks'>
+                        <Icon name='palette' /> ArtWorks
+                    </Link>
                 </li>
                 <li>
-                    <Link href='/contact'>Contact me</Link>
+                    <Link href='/contact'>
+                        <Icon name='mail' /> Contact me
+                    </Link>
                 </li>
             </ul>
         </nav>
