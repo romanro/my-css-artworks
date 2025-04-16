@@ -4,14 +4,9 @@ import './globals.scss';
 import { MainNavbar } from '@/components/MainNavbar/MainNavbar';
 import { ROOT_METADATA } from '@/consts/rootMetadata.consts';
 
-const geistSans = localFont({
-    src: './fonts/GeistVF.woff',
-    variable: '--font-geist-sans',
-    weight: '100 900',
-});
-const geistMono = localFont({
-    src: './fonts/GeistMonoVF.woff',
-    variable: '--font-geist-mono',
+const didactGothic = localFont({
+    src: './fonts/DidactGothic-Regular.ttf',
+    variable: '--font-didact-gothic',
     weight: '100 900',
 });
 
@@ -39,7 +34,7 @@ export default function RootLayout({
                     content='width=device-width, 
                    initial-scale=1.0'></meta>
             </head>
-            <body className={`${geistSans.variable} ${geistMono.variable} ${icons.variable} h-screen`}>
+            <body className={`${didactGothic.variable} ${icons.variable} h-screen`}>
                 <MainNavbar />
                 <main className='h-screen'>{children}</main>
             </body>

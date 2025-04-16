@@ -1,4 +1,7 @@
 .nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
     position: fixed;
     z-index: 1000;
 }
