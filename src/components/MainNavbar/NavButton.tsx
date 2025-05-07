@@ -13,7 +13,7 @@ type NavButtonProps = {
 const NavButton: FC<NavButtonProps> = ({ label, icon, href }) => {
     return (
         <li className={styles.navbutton}>
-            <Link href={href}>
+            <Link href={href} className={styles.link}>
                 <Icon name={icon} />
                 <span>{label}</span>
             </Link>
