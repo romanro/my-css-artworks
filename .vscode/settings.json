@@ -1,0 +1,16 @@
+{
+    "workbench.colorCustomizations": {
+        // Right sidebar background
+        "sideBar.background": "#330000", // dark red tone
+        // Right sidebar foreground (text)
+        "sideBar.foreground": "#FFCCCC", // light red/pink
+        // Highlighted item background
+        "sideBarSectionHeader.background": "#660000",
+        "sideBarSectionHeader.foreground": "#FF6666",
+        // Active item highlight
+        "list.activeSelectionBackground": "#990000",
+        "list.activeSelectionForeground": "#FFFFFF",
+        // Hovered item
+        "list.hoverBackground": "#661111"
+    }
+}
