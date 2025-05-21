@@ -10,6 +10,12 @@ const didactGothic = localFont({
     weight: '100 900',
 });
 
+const smooch = localFont({
+    src: './fonts/Smooch-Regular.ttf',
+    variable: '--font-smooch',
+    weight: '400',
+});
+
 const icons = localFont({
     src: './fonts/MaterialIconsOutlined-Regular.otf',
     variable: '--font-icons',
@@ -34,7 +40,7 @@ export default function RootLayout({
                     content='width=device-width, 
                    initial-scale=1.0'></meta>
             </head>
-            <body className={`${didactGothic.variable} ${icons.variable} h-screen`}>
+            <body className={`${didactGothic.variable} ${icons.variable} ${smooch.variable} h-screen`}>
                 <MainNavbar />
                 <main className='h-screen'>{children}</main>
             </body>

@@ -4,17 +4,24 @@
     list-style: none;
     position: fixed;
     z-index: 1000;
+
+    .menu {
+        overflow: hidden;
+        &.opened {
+            height: auto;
+            max-height: 500px;
+        }
+
+        &.closed {
+            height: 20px;
+            max-height: 0;
+        }
+    }
 }
 
 .navbutton {
     padding: 0.5rem;
     .link {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 0.5rem;
-        user-select: none;
-
         span {
             display: inline-flex;
         }
