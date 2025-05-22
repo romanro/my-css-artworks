@@ -1,3 +1,4 @@
+import { Seasun } from '@/artwork-components/Seasun/Seasun';
 import { ABOUT_ME_DESC, ROOT_METADATA } from '@/consts/rootMetadata.consts';
 import { Metadata } from 'next';
 
@@ -14,8 +15,11 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function AboutPage() {
     return (
-        <div>
-            <article>
+        <div className='relative flex justify-center items-center h-screen w-screen'>
+            <div className='absolute top-0 left-0 w-full h-full -z-10'>
+                <Seasun />
+            </div>
+            <article className='flex flex-col gap-4 p-4 md:p-8 md:pt-[200px] max-w-[1300px] max-h-[100%] overflow-y-auto'>
                 <h1>Hi, I’m Roman Rozanov</h1>
                 <h2>
                     Welcome to <strong>Antifreez CSS Art</strong>, my creative corner where code meets art.

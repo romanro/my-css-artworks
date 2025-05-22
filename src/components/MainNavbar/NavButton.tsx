@@ -20,8 +20,8 @@ const NavButton: FC<NavButtonProps> = ({ label, icon, href, onClick }) => {
         <li className={styles.navbutton} onClick={() => pathname !== href && onClick?.()}>
             <Link
                 href={href}
-                className={`flex md:flex-col min-w-[75px] md:justify-center items-center gap-[5px] select-none text-sky-900 hover:text-sky-700  ${
-                    pathname === href ? 'pointer-events-none text-sky-600' : ''
+                className={`flex transition-colors duration-1000 md:flex-col min-w-[75px] md:justify-center items-center gap-[5px] select-none text-sky-600 hover:text-sky-300  ${
+                    pathname === href ? 'pointer-events-none text-amber-600' : ''
                 }`}>
                 <Icon name={icon} className={'text-3xl md:text-5xl'} />
                 <span className={'text-md md:text-sm'}>{label}</span>

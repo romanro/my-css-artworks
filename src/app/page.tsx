@@ -1,10 +1,13 @@
 import { Seasun } from '@/artwork-components/Seasun/Seasun';
-import styles from './page.module.scss';
+import { Logo } from '@/components/Logo/Logo';
 
 export default function Home() {
     return (
-        <div className={`${styles.homePage} h-screen bg-sky-300 dark:bg-sky-950`}>
-            <Seasun />
+        <div className='relative flex justify-center items-center h-screen w-screen'>
+            <div className='absolute top-0 left-0 w-full h-full -z-10'>
+                <Seasun />
+            </div>
+            <Logo />
         </div>
     );
 }

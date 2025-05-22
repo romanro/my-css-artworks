@@ -1,0 +1,32 @@
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    .logo {
+        font-family: var(--font-smooch);
+        display: block;
+        font-size: 8rem;
+        transform: rotate(-7deg);
+        // Gradient Text Styles
+        background: linear-gradient(5deg, var(--color-amber-600), var(--color-amber-300));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        // Optional for Firefox (less support)
+        background-clip: text;
+        color: transparent;
+        margin-top: -1rem;
+        white-space: nowrap;
+    }
+    .moto {
+        display: block;
+        font-size: 1.6rem;
+        color: var(--color-sky-100);
+        background: linear-gradient(15deg, var(--color-sky-700), var(--color-sky-500));
+        padding: 0.1rem 1rem;
+        border-radius: 0.5rem;
+        margin-top: -1rem;
+    }
+}
