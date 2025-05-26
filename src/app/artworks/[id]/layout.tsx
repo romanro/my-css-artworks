@@ -4,7 +4,7 @@ import { ArtworkId } from '@/models/artworks.models';
 
 type ArtworksLayoutProps = Readonly<{
     children: React.ReactNode;
-    params: { id: ArtworkId };
+    params: Promise<{ id: ArtworkId }>;
 }>;
 export default async function ArtworksLayout({ children, params }: ArtworksLayoutProps) {
     const { id } = await params;
