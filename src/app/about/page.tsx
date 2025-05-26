@@ -1,6 +1,7 @@
 import { ABOUT_ME_DESC, ROOT_METADATA } from '@/consts/rootMetadata.consts';
 import { cnames } from '@/utils/cnames';
 import { Metadata } from 'next';
+import styles from './AboutPage.module.scss';
 
 export async function generateMetadata(): Promise<Metadata> {
     const title = `About Me: ${ROOT_METADATA.title}`;
@@ -16,11 +17,16 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function AboutPage() {
     return (
         <div className={cnames(['relative flex justify-center items-center h-screen w-screen'])}>
-            <div className='flex justify-center w-full max-h-[100%] overflow-y-auto'>
-                <article className='flex flex-col gap-4 p-4 md:p-8 md:pt-[200px] max-w-[1300px]'>
-                    <h1>Hi, I’m Roman Rozanov</h1>
+            <div className='flex justify-center w-full max-h-[100%] overflow-y-auto '>
+                <article
+                    className={cnames([
+                        styles.article,
+                        'flex text-blue-900 flex-col gap-4 p-4 md:p-12 md:pt-[200px] max-w-[1300px] bg-white/20 dark:bg-black/20 h-[100%]',
+                    ])}>
+                    <h1 className='text-orange-600'>Hi, I’m Roman Rozanov</h1>
                     <h2>
-                        Welcome to <strong>Antifreez CSS Art</strong>, my creative corner where code meets art.
+                        Welcome to <span className='text-orange-600'>Antifreez CSS Art</span>, my creative corner where
+                        code meets art.
                     </h2>
                     <p>
                         {`I'm a front-end developer and tech lead with over 15 years of experience, specializing in CSS, HTML,

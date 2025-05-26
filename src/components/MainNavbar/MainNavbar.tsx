@@ -9,7 +9,7 @@ export const MainNavbar: FC = () => {
 
     return (
         <div className={`${styles.nav} w-full flex p-2 md:justify-center md:p-4 `}>
-            <nav className={`bg-white/80 dark:bg-black/80 p-4 rounded-lg shadow-md`}>
+            <nav className='bg-white/80 dark:bg-black/80 p-4 rounded-lg shadow-md'>
                 <button
                     className='md:hidden text-gray-700 dark:text-gray-300'
                     onClick={() => setIsOpen((prev) => !prev)}>
