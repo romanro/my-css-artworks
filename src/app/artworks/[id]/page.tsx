@@ -5,7 +5,7 @@ import { getArtworkById } from '@/utils/artwork.utils';
 import { FC } from 'react';
 
 type ArtworkDetailPageProps = {
-    params: { id: ArtworkId };
+    params: Promise<{ id: ArtworkId }>;
 };
 
 const ArtworkDetailPage: FC<ArtworkDetailPageProps> = async ({ params }) => {
