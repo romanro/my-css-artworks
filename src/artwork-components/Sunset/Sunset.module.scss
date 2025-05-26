@@ -1,4 +1,4 @@
-@import 'variables';
+@use './variables' as *;
 
 .sunset_background {
     position: relative;

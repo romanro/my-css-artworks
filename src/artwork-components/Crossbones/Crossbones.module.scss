@@ -1,4 +1,4 @@
-@import 'variables';
+@use './variables' as *;
 
 .crossbones_background {
     position: relative;
