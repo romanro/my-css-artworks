@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import './globals.scss';
 import { MainNavbar } from '@/components/MainNavbar/MainNavbar';
 import { ROOT_METADATA } from '@/consts/rootMetadata.consts';
+import { Seasun } from '@/artwork-components/Seasun/Seasun';
 
 const didactGothic = localFont({
     src: './fonts/DidactGothic-Regular.ttf',
@@ -43,6 +44,9 @@ export default function RootLayout({
             <body className={`${didactGothic.variable} ${icons.variable} ${smooch.variable} h-screen`}>
                 <MainNavbar />
                 <main className='h-screen'>{children}</main>
+                <div className='absolute top-0 left-0 w-full h-full -z-10'>
+                    <Seasun />
+                </div>
             </body>
         </html>
     );
