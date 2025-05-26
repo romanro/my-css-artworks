@@ -1,6 +1,7 @@
 import { ArtworksGallery } from '@/components/ArtworksGallery/ArtworksGallery';
 import { SupportedArtworks } from '@/consts/artworks.consts';
 import { ARTWORKS_DESK, ROOT_METADATA } from '@/consts/rootMetadata.consts';
+import { cnames } from '@/utils/cnames';
 import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -15,8 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 export default function ArtworksPage() {
     return (
-        <div>
-            <article>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <article className={cnames(['info-article '])}>
                 <header>
                     <h1>Artworks Gallery</h1>
                     <p>
