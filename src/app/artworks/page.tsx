@@ -16,10 +16,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 export default function ArtworksPage() {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-9 gap-4 p-4 md:p-8 max-w-screen-xl mx-auto md:p-12 md:pt-[200px] bg-white/20 dark:bg-black/20'>
-            <article className={cnames(['info-article', 'md:col-span-4'])}>
+        <div className='grid grid-cols-1 md:grid-cols-9 gap-2 p-4 md:p-6 max-w-screen-xl mx-auto md:p-12 md:pt-[200px] bg-white/20 dark:bg-black/20'>
+            <article className={cnames(['info-article', 'md:col-span-4 text-blue-900'])}>
                 <header>
-                    <h1>Artworks Gallery</h1>
+                    <h1 className='text-orange-500'>Artworks Gallery</h1>
                     <p>
                         {`Welcome to the Antifreez CSS Art Gallery, a showcase of handcrafted creations where style meets structure.`}
                     </p>

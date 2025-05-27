@@ -20,7 +20,7 @@ export default function AboutPage() {
                 <article
                     className={cnames([
                         'info-article',
-                        'flex text-blue-900 flex-col gap-4 p-4 md:p-12 md:pt-[200px] max-w-[1300px] bg-white/20 dark:bg-black/20 h-[100%]',
+                        'flex text-blue-900 flex-col gap-4 p-4 md:p-12 md:pt-[200px]  max-w-screen-xl mx-auto bg-white/20 dark:bg-black/20 h-[100%]',
                     ])}>
                     <h1 className='text-orange-600'>Hi, I’m Roman Rozanov</h1>
                     <h2>
