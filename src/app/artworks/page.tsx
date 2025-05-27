@@ -16,16 +16,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 export default function ArtworksPage() {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <article className={cnames(['info-article '])}>
+        <div className='grid grid-cols-1 md:grid-cols-9 gap-4 p-4 md:p-8 max-w-screen-xl mx-auto md:p-12 md:pt-[200px] bg-white/20 dark:bg-black/20'>
+            <article className={cnames(['info-article', 'md:col-span-4'])}>
                 <header>
                     <h1>Artworks Gallery</h1>
                     <p>
                         {`Welcome to the Antifreez CSS Art Gallery, a showcase of handcrafted creations where style meets structure.`}
                     </p>
                     <p>
-                        {`Each piece in this collection is built using only HTML and CSS, 
-                demonstrating the potential of modern styling techniques without relying on images or external libraries.`}
+                        Each piece in this collection is built using only HTML and CSS, demonstrating the potential of
+                        modern styling techniques without relying on images or external libraries.
                     </p>
                 </header>
                 <h2>{`What You'll Find Here`}</h2>
@@ -54,7 +54,7 @@ export default function ArtworksPage() {
                     <p>{`Enjoy exploring the collection, and let's create something amazing with CSS and SCSS!`}</p>
                 </footer>
             </article>
-            <section>
+            <section className='md:col-span-5'>
                 <ArtworksGallery artworks={SupportedArtworks} />
             </section>
         </div>
