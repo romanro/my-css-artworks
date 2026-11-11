@@ -46,5 +46,5 @@ The artwork itself lives in `src/artwork-components/<Name>/` as a `<Name>.tsx` c
 - `src/app/globals.scss` pulls in `src/styles/_theme.scss` (Tailwind-v4-style `--color-*` oklch CSS variables, usable from SCSS) and holds shared rules like `.info-article`.
 - Fonts are local (`src/app/fonts/`) via `next/font/local`, exposed as CSS vars: `--font-didact-gothic` (body), `--font-smooch` (headings), `--font-icons` (Material Icons Outlined, used by the `Icon` component — pass the ligature name, e.g. `<Icon name='palette' />`).
 - Dark mode follows the OS (`darkMode: 'media'`).
-- `tailwind.config.js` quirk: its `content` globs (`./app`, `./components`, …) don't match `src/`; class scanning of `src/**` works through the legacy `purge` key. Keep `src/**` covered if you touch this config.
+- Tailwind scans `./src/**/*.{js,ts,jsx,tsx}` for classes (`content` in `tailwind.config.js`).
 - Path alias: `@/*` → `src/*`.
